@@ -3,6 +3,8 @@
     if($_POST){
         print_r($_POST);
         print_r($_FILES['archivo']['name']);
+
+        move_uploaded_file($_FILES['archivo']['tmp_name'],$_FILES['archivo']['name']);
     }
 
 ?>
